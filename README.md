@@ -1,3 +1,43 @@
+## Pseudocode
+
+```
+-------------------------HTML Layout.........................
+// Require Timeblocks
+
+
+
+-------------------------JS Functionality .........................
+// Display the Current Date in the corresponding HTML Div
+//      -Format = "Thursday, September 5th"
+//      -Apply moment.js functionality/formatting
+//      -Target currentdate div in HTML doc
+//      -Use jQuery to output value to HTML
+// Will need to implement local storage function
+//      -this will save all tasks to the time blocks
+// Will need to implement moment.js
+//      -for data and time conversions throughout application
+//          -noticed that this was already linked in the html document
+
+
+
+```
+
+## System Requirements
+
+// Requires Moment.js library to work with data and time
+//      -https://momentjs.com/
+
+
+
+
+
+## Sources
+
+// Using moment.js:
+//  -https://www.webfx.com/blog/web-design/javascript-dates-moment-js/
+
+-------------------------Original ReadMe.........................
+
 # 05 Third-Party APIs: Work Day Scheduler
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
