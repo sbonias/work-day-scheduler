@@ -25,6 +25,25 @@
   </header>
   <div class="container">
     <!----Timeblocks go here---->
+    <!----Created a new row for the given time block---->
+    <div class="row">
+      <!----Created column 1 of 3 for the hour---->
+      <!----The "hour" class corresponds to the ".hour" in the CSS file-->
+      <!----The "time-block" class corresponds to the ".time-block" in the CSS file-->
+      <div class="hour time-block col-2">9:00 am</div>
+      <!----Needed to look-up how to create a text input element/tag---->
+      <!----  https://www.w3schools.com/tags/tag_textarea.asp---->
+      <!----Created column 2 of 3 for the text input field---->
+      <!----the "textarea" tag corresponds to the "textarea" in the CSS file-->
+      <!----OPEN QUESTION = MAY NEED TO ADD MORE TO THIS CLASS FOR LOCAL STORAGE TO WORK---->
+      <textarea class="input col-8"></textarea>
+      <!----Created 3 of 3 columns for the save feature---->
+      <!----The "saveBtn" class corresponds to the ".saveBtn" in the CSS file-->
+      <!----Searched the fontawesome library for an icon of a padlock---->
+      <!----Found one relatively similar to the example and applied it---->
+      <!----The CSS file references "saveBtn i: hover" which seems to correspond to the buttons embedded icon---->
+      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+    </div>
   </div>
 
 
