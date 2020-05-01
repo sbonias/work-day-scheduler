@@ -2,25 +2,25 @@
 
 ```
 -------------------------HTML Layout.........................
-// Require Timeblocks (referenced the styles.css file for naming conventions and expected elements)
-//      -Each block of time consists of the following components:
-//          -"time-block" = Displays the hour
-//              -this is a static field as the time-blocks start at 9am and end at 5pm (each hour has a time-block)
-//          -"textarea" = Allows for user input
-//          -"saveBtn" = Allows for user to save input (local storage)
-//              -represented as a padlock icon
-//      -Appears as though I will need a new row per each block (9 blocks in total)
-//      -Appears as though the different sections of the block will be separated into columns
-//          -targeting 3 columns per block
+// Require Timeblocks (referenced the styles.css file for naming conventions and expected elements) x
+//      -Each block of time consists of the following components: x
+//          -"time-block" = Displays the hour x
+//              -this is a static field as the time-blocks start at 9am and end at 5pm (each hour has a time-block) x
+//          -"textarea" = Allows for user input x
+//          -"saveBtn" = Allows for user to save input (local storage) x
+//              -represented as a padlock icon x
+//      -Appears as though I will need a new row per each block (9 blocks in total) x
+//      -Appears as though the different sections of the block will be separated into columns x
+//          -targeting 3 columns per block x
 
 -------------------------JS Functionality .........................
-// Display the Current Date in the corresponding HTML Div
-//      -Format = "Thursday, September 5th"
-//      -Apply moment.js functionality/formatting
-//      -Target currentdate div in HTML doc
-//      -Use jQuery to output value to HTML
-// Will need to implement local storage function
-//      -this will save all tasks to the time blocks
+// Display the Current Date in the corresponding HTML Div x
+//      -Format = "Thursday, September 5th" x
+//      -Apply moment.js functionality/formatting x
+//      -Target currentdate div in HTML doc x
+//      -Use jQuery to output value to HTML x
+// Will need to implement local storage function to text-area div
+//      -this will save all tasks entered in the text-area div
 // Will need to implement moment.js
 //      -for data and time conversions throughout application
 //          -noticed that this was already linked in the html document
