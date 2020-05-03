@@ -1,14 +1,22 @@
+## Review
+
+You are required to submit the following for review:
+
+- The URL of the deployed application: https://sbonias.github.io/work-day-scheduler/
+
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
 ## Pseudocode
 
 ```
 -------------------------HTML Layout.........................
-// Require Timeblocks (referenced the styles.css file for naming conventions and expected elements) x
+// Requires Timeblocks (referenced the styles.css file for naming conventions and expected elements) x
 //      -Each block of time consists of the following components: x
 //          -"time-block" = Displays the hour x
-//              -this is a static field as the time-blocks start at 9am and end at 5pm (each hour has a time-block) x
+//              -this is a static field as the time-blocks start at 9am and end at 5pm (each hr has time-block) x
 //          -"textarea" = Allows for user input x
 //          -"saveBtn" = Allows for user to save input (local storage) x
-//              -represented as a padlock icon x
+//              -embedded padlock icon x
 //      -Appears as though I will need a new row per each block (9 blocks in total) x
 //      -Appears as though the different sections of the block will be separated into columns x
 //          -targeting 3 columns per block x
@@ -19,25 +27,42 @@
 //      -Apply moment.js functionality/formatting x
 //      -Target currentdate div in HTML doc x
 //      -Use jQuery to output value to HTML x
+// Will need to create function that updates the background color of the text areas element per the current time x
+//      Criteria: x
+//      -When the time-block hour = current hour x
+//          -text area displays as red x
+//      -When the time-block > current hour x
+//          -text area displays as green x
+//      -When the time-block < current hour x
+//          -text area displays as grey x
+//      How to accomplish this? x
+//          -see "textAreaBackgroundColor" function comments to see how this was accomplished x
 // Will need to implement local storage function to text-area div
 //      -this will save all tasks entered in the text-area div
-// Will need to implement moment.js
-//      -for data and time conversions throughout application
-//          -noticed that this was already linked in the html document
+// Will need to implement moment.js x
+//      -for data and time conversions throughout application x
+//          -noticed that this was already linked in the html document x
 ```
 
 ## System Requirements
+
 ```
 // Requires Moment.js library to work with data and time
 //      -https://momentjs.com/
 ```
 
 ## Sources
+
 ```
 // Using moment.js:
 //  -https://www.webfx.com/blog/web-design/javascript-dates-moment-js/
 // Creating a text input field in HTML
 //  -https://www.w3schools.com/tags/tag_textarea.asp
+// Parse Integer:
+//  -https://www.w3schools.com/jsref/jsref_parseint.asp
+// Calling the ID of an element via jQuery:
+//  -https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
+
 
 ```
 
@@ -85,9 +110,10 @@ The following animation demonstrates the application functionality:
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+- The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
+---
+
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

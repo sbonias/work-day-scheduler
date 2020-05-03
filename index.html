@@ -1,129 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!----Bootstrap CDN Link---->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!----Font Awesome CDN Link---->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!----Google Fonts CDN Link---->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!----CSS file Link---->
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!----Bootstrap CDN Link---->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <!----Font Awesome CDN Link---->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <!----Google Fonts CDN Link---->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <!----CSS file Link---->
-  <link rel="stylesheet" href="style.css" />
-  <title>Work Day Scheduler</title>
-</head>
-
-<body>
-  <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container">
-    <!----Timeblocks go here---->
-    <!----HOUR 1---->
-    <!----Created a new row for the given time block---->
-    <div class="row">
-      <!----Created column 1 of 3 for the hour---->
-      <!----The "hour" class corresponds to the ".hour" in the CSS file-->
-      <!----The "time-block" class corresponds to the ".time-block" in the CSS file-->
-      <div class="hour time-block col-2">9:00 am</div>
-      <!----Needed to look-up how to create a text input element/tag---->
-      <!----  https://www.w3schools.com/tags/tag_textarea.asp---->
-      <!----Created column 2 of 3 for the text input field---->
-      <!----the "textarea" tag corresponds to the "textarea" in the CSS file-->
-      <!----OPEN QUESTION = MAY NEED TO ADD MORE TO THIS CLASS FOR LOCAL STORAGE TO WORK---->
-      <textarea class="input col-8"></textarea>
-      <!----Created 3 of 3 columns for the save feature---->
-      <!----The "saveBtn" class corresponds to the ".saveBtn" in the CSS file-->
-      <!----Searched the fontawesome library for an icon of a padlock---->
-      <!----Found one relatively similar to the example and applied it---->
-      <!----The CSS file references "saveBtn i: hover" which seems to correspond to the buttons embedded icon---->
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!----Timeblocks go here---->
+      <!----HOUR 1---->
+      <!----Created a new row for the given time block---->
+      <div class="row">
+        <!----Created column 1 of 3 for the hour---->
+        <!----The "hour" class corresponds to the ".hour" in the CSS file-->
+        <!----The "time-block" class corresponds to the ".time-block" in the CSS file-->
+        <div class="hour time-block col-2">9:00 am</div>
+        <!----Needed to look-up how to create a text input element/tag---->
+        <!----  https://www.w3schools.com/tags/tag_textarea.asp---->
+        <!----Created column 2 of 3 for the text input field---->
+        <!----the "textarea" tag corresponds to the "textarea" in the CSS file-->
+        <!----OPEN QUESTION = MAY NEED TO ADD MORE TO THIS CLASS FOR LOCAL STORAGE TO WORK---->
+        <textarea class="input col-8" id="9"></textarea>
+        <!----Created 3 of 3 columns for the save feature---->
+        <!----The "saveBtn" class corresponds to the ".saveBtn" in the CSS file-->
+        <!----Searched the fontawesome library for an icon of a padlock---->
+        <!----Found one relatively similar to the example and applied it---->
+        <!----The CSS file references "saveBtn i: hover" which seems to correspond to the buttons embedded icon---->
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----Will copy and paste the above tags and create an entry per each hour of a business day (minus the comments)---->
+      <!----HOUR 2---->
+      <div class="row">
+        <div class="hour time-block col-2">10:00 am</div>
+        <textarea class="input col-8" id="10"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 3---->
+      <div class="row">
+        <div class="hour time-block col-2">11:00 am</div>
+        <textarea class="input col-8" id="11"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 4---->
+      <div class="row">
+        <div class="hour time-block col-2">12:00 pm</div>
+        <textarea class="input col-8" id="12"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 5---->
+      <div class="row">
+        <div class="hour time-block col-2">1:00 pm</div>
+        <textarea class="input col-8" id="13"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 6---->
+      <div class="row">
+        <div class="hour time-block col-2">2:00 pm</div>
+        <textarea class="input col-8" id="14"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 7---->
+      <div class="row">
+        <div class="hour time-block col-2">3:00 pm</div>
+        <textarea class="input col-8" id="15"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 8---->
+      <div class="row">
+        <div class="hour time-block col-2">4:00 pm</div>
+        <textarea class="input col-8" id="16"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
+      <!----HOUR 9---->
+      <div class="row">
+        <div class="hour time-block col-2">5:00 pm</div>
+        <textarea class="input col-8" id="17"></textarea>
+        <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
+      </div>
     </div>
-    <!----Will copy and paste the above tags and create an entry per each hour of a business day (minus the comments)---->
-    <!----HOUR 2---->
-    <div class="row">
-      <div class="hour time-block col-2">10:00 am</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 3---->
-    <div class="row">
-      <div class="hour time-block col-2">11:00 am</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 4---->
-    <div class="row">
-      <div class="hour time-block col-2">12:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 5---->
-    <div class="row">
-      <div class="hour time-block col-2">1:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 6---->
-    <div class="row">
-      <div class="hour time-block col-2">2:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 7---->
-    <div class="row">
-      <div class="hour time-block col-2">3:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 8---->
-    <div class="row">
-      <div class="hour time-block col-2">4:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-    <!----HOUR 9---->
-    <div class="row">
-      <div class="hour time-block col-2">5:00 pm</div>
-      <textarea class="input col-8"></textarea>
-      <button class="col-2 saveBtn"><i class="fas fa-lock"></i></button>
-    </div>
-  </div>
+    <!----jQuery CDN Link---->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!----Moment.js CDN Link---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+    <script type="text/javascript">
+      //added "document.ready" to ensure the Javascript doesn't get run until the HTML is finished loading
+      $(document).ready(function () {
+        //----------------------Displaying the Current Day in the corresponding HTML Div---------------------
+        //Used this website for direction: https://www.webfx.com/blog/web-design/javascript-dates-moment-js/
+        //Created a moment event by declaring it as a variable (to be used throughout code)
+        var NowMoment = moment();
+        //Console Logged to see what could be done with the format
+        console.log(NowMoment.format("dddd"));
+        console.log(NowMoment.format("MM-DD-YYYY"));
+        console.log(NowMoment.format("hh:mm"));
 
+        //Console Logged this and appears to return as an object/array (normal API behavior)
+        console.log(NowMoment);
+        //Used the jQuery selector to target the current day div and to pass the current date via moment.js
+        //Applied specific formatting in order to display the day of the week followed by mm/dd/yyyy
+        //Was able to put this together in one line (which was good)
+        //Applied string concatenation to display the date format accordingly
+        $("#currentDay").text(NowMoment.format("dddd, " + "MM-DD-YYYY"));
+        //------------Function to change the background color of the text area based on current time---------------------
+        //Current hour = Red, Past hour(s) = Gray, Future hours(s) = Green
 
-  <!----jQuery CDN Link---->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <!----Moment JS CDN Link---->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        function textAreaBackgroundColor() {
+          //Need a common value to compare the current time against each time-block
+          //    Need round integer to easily achieve this (parse integer?)
+          //    Military time would be best, considering I wouldn't have to take am and pm into account
+          //    https://www.w3schools.com/jsref/jsref_parseint.asp
+          //Need to declare variable 1:
+          //    NowMoment is our variable that brings us the current time
+          //    I need to convert this into a regular number
+          //      Preferably just the hour
+          //Need a variable 2:
+          //    Will need to create an additional attribute under each div referencing the time-block in military time
+          //    I need to call the id (military time to nearest hour) and store it as a variable
+          //    https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
+          //Need to compare the 2 variables:
+          //    I would also only have to compare whether the div time is equal, greater or less than the current time
+          //    If Else Statement can achieve this
+          //Upon comparing the 2 variables need to assign the corresponding CSS selectors to the div (text-area)
+          //    CSS selectors in play: .past, .present, .future
+          //Likely place the above inside a loop?
+          //    https://api.jquery.com/each/
 
-  <script>
-    //----------------------Displaying the Current Day in the corresponding HTML Div---------------------
-    //Used this website for direction: https://www.webfx.com/blog/web-design/javascript-dates-moment-js/
-    //Created a moment event by declaring the variable to the function 
-    var NowMoment = moment();
-    //Used the jQuery selector to target the current day div and to pass the current date via moment.js
-    //Applied specific formatting in order to display the day of the week followed by mm/dd/yyyy
-    //Was able to put this together in one line (which was good)
-    //Applied string concatenation to display the date format accordingly
-    $("#currentDay").text(NowMoment.format("dddd, " + "MM-DD-YYYY"));
+          //I ran into an issue where my code was comparing the current hour against the time block hour and rendering
+          //the correct color in the textarea div, however, it was applying it to all blocks as opposed to individual blocks
+          //I worked with the TA on trying to fix my code to solve for this
 
+          console.log(NowMoment.format("h:mm a"));
+          var currentHour = parseInt(moment().hours());
+          console.log(currentHour);
 
+          console.log(parseInt($("textarea").attr("id")));
+          var schedulerHour = parseInt($("textarea").attr("id"));
+          console.log(schedulerHour);
 
+          //for (var i = 0; i < $("textarea").length; i++) {
 
+          $("textarea").each(function (i) {
+            if (schedulerHour === currentHour) {
+              $($("textarea")[i]).addClass("present");
+            }
+            if (schedulerHour > currentHour) {
+              $($("textarea")[i]).addClass("future");
+            }
+            if (schedulerHour < currentHour) {
+              $($("textarea")[i]).addClass("past");
+            }
+            console.log($($("textarea")[i]));
+          });
+        }
 
-
-  </script>
-
-
-
-
-</body>
-
+        textAreaBackgroundColor();
+      });
+    </script>
+  </body>
 </html>
