@@ -1,10 +1,12 @@
-## Review
+# 05 Third-Party APIs: Work Day Scheduler
 
-You are required to submit the following for review:
+- https://sbonias.github.io/work-day-scheduler/
 
-- The URL of the deployed application: https://sbonias.github.io/work-day-scheduler/
+- https://github.com/sbonias/work-day-scheduler
 
-- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Description
+
+The purpose of this application is to allow for users to enter tasks into a schedule of a normal business day from 9am-5pm. The current date is displayed at the top of the browser underneath the title and updates on a daily basis. Each timeblock consists of an hour of the business day. To the right of the time there is an input box for users to enter events or general tasks. The background of the text input box changes colors based on a comparison between the current hour and the corresponding timeblock hour. If current hour matches the timeblock hour, that block will have a red background. If the current hour is less than a given timeblock, then these blocks will have a green background. And if the current hour is greater than a given timeblock, then these blocks will have a gray background. The user also has the option of saving the text input tasks by clicking on the padlock icon button, which will allow the user to refresh the page and keep the history of their tasks. However, this functionality is not currently working as it is yet to be coded.
 
 ## Pseudocode
 
@@ -37,9 +39,10 @@ You are required to submit the following for review:
 //          -text area displays as grey x
 //      How to accomplish this? x
 //          -see "textAreaBackgroundColor" function comments to see how this was accomplished x
-// Will need to implement local storage function to text-area div
-//      -this will save all tasks entered in the text-area div under the given time block so when refreshing the page your tasks are not emptied
-//      -works or saves when save button is clicked (on click event)
+// Will need to implement local storage function to text-area div (INCOMPLETE)
+//      -this will save all tasks entered in the text-area div under the given time block so (INCOMPLETE)
+//          when refreshing the page your tasks are not emptied (INCOMPLETE)
+//      -works or saves when save button is clicked (on click event) (INCOMPLETE)
 // Will need to implement moment.js x
 //      -for data and time conversions throughout application x
 //          -noticed that this was already linked in the html document x
@@ -50,6 +53,15 @@ You are required to submit the following for review:
 ```
 // Requires Moment.js library to work with data and time
 //      -https://momentjs.com/
+// Requires FontAwesome CDN link for icon display
+//      -https://fontawesome.com/
+// Requires Bootstrap CDN link for Jumbotron component
+//      -https://getbootstrap.com/
+// Requires Google Fonts CDN link for unique fonts
+//      -https://fonts.google.com/
+// Requires jQuery CDN Link for jQuery library
+//      -https://jquery.com/
+
 ```
 
 ## Sources
@@ -62,10 +74,11 @@ You are required to submit the following for review:
 // Parse Integer:
 //  -https://www.w3schools.com/jsref/jsref_parseint.asp
 // Calling the ID of an element via jQuery:
-//  -https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
+//  -https://stackoverflow.com/questions/3239598/
 // Returning unique id's from multiple similarly named classes
 //  -https://stackoverflow.com/questions/33147262/get-id-value-from-multiple-class
-
+// jQuery .each() method
+//  -https://api.jquery.com/each/
 ```
 
 ```
