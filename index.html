@@ -45,7 +45,7 @@
         <!----  https://www.w3schools.com/tags/tag_textarea.asp---->
         <!----Created column 2 of 3 for the text input field---->
         <!----the "textarea" tag corresponds to the "textarea" in the CSS file-->
-        <!----OPEN QUESTION = MAY NEED TO ADD MORE TO THIS CLASS FOR LOCAL STORAGE TO WORK---->
+        <!----Added unique id of 9 to use in textAreaBackgroundColor function---->
         <textarea class="input col-8" id="9"></textarea>
         <!----Created 3 of 3 columns for the save feature---->
         <!----The "saveBtn" class corresponds to the ".saveBtn" in the CSS file-->
@@ -151,37 +151,84 @@
           //    CSS selectors in play: .past, .present, .future
           //Likely place the above inside a loop?
           //    https://api.jquery.com/each/
+          //Issue and Solution*
+          //  I ran into an issue where my code was comparing the current hour against the time block hour and rendering
+          //  the correct color in the textarea div, however, it was applying it to all textarea divs as opposed to individual blocks
+          //  I worked with the TA on trying to fix my code to solve for this and didn't have any luck.
+          //  After several hours of attempt after attempt I needed to backup and figure out how to
+          //  capture each unique id under each class otherwise my if statements wouldn't work on a case by case basis
+          //  I then google phu'd the following solution which was sort of what I was doing to begin with
+          //  with the addition of $(this) in the syntax. Otherwise it would only look at the first class and not iterate
+          //  through all classes (via the .each() method). https://stackoverflow.com/questions/33147262/get-id-value-from-multiple-class
 
-          //I ran into an issue where my code was comparing the current hour against the time block hour and rendering
-          //the correct color in the textarea div, however, it was applying it to all blocks as opposed to individual blocks
-          //I worked with the TA on trying to fix my code to solve for this
-
+          //----------Attempt 3--------------
           console.log(NowMoment.format("h:mm a"));
           var currentHour = parseInt(moment().hours());
           console.log(currentHour);
 
           console.log(parseInt($("textarea").attr("id")));
-          var schedulerHour = parseInt($("textarea").attr("id"));
-          console.log(schedulerHour);
 
-          //for (var i = 0; i < $("textarea").length; i++) {
-
-          $("textarea").each(function (i) {
-            if (schedulerHour === currentHour) {
-              $($("textarea")[i]).addClass("present");
-            }
-            if (schedulerHour > currentHour) {
-              $($("textarea")[i]).addClass("future");
-            }
+          // Needed to figure out how to return each unique id from each class (textarea)
+          //  https://stackoverflow.com/questions/33147262/get-id-value-from-multiple-class
+          $("textarea").each(function () {
+            var schedulerHour = parseInt($(this).attr("id"));
+            console.log(schedulerHour);
             if (schedulerHour < currentHour) {
-              $($("textarea")[i]).addClass("past");
+              $(this).addClass("past");
+            } else if (schedulerHour === currentHour) {
+              $(this).addClass("present");
+            } else {
+              $(this).addClass("future");
             }
-            console.log($($("textarea")[i]));
           });
         }
 
         textAreaBackgroundColor();
+
+        //------------Function to store the text input under the textarea div in local storage---------------------
       });
+
+      //-----------Random Console Logging Efforts--------
+      // console.log(NowMoment.format("h:mm a"));
+      // var currentHour = parseInt(moment().hours());
+      // console.log(currentHour);
+      // console.log(parseInt($("textarea").attr("id")));
+      // var schedulerHour = parseInt($("textarea").attr("id"));
+
+      //-----------Attempt 2-------------
+      // var currentHour = parseInt(moment().hours());
+      // console.log(currentHour);
+      // var textAreaEach = $("textarea").attr("id");
+      // console.log(textAreaEach);
+      // $("textarea").attr("id").val();
+      // $("textarea").each(function () {
+      //   var schedulerHour = parseInt($("textarea").attr("id"));
+      //   console.log(schedulerHour);
+      //   if (schedulerHour < currentHour) {
+      //     $(this).addClass("past");
+      //   } else if (schedulerHour === currentHour) {
+      //     $(this).addClass("present");
+      //   } else {
+      //     $(this).addClass("future");
+      //   }
+      // });
+      //-------------Attempt 1-------------
+      // var textAreaDiv = $("textarea").toArray();
+      // console.log(textAreaDiv);
+      // textAreaDiv.forEach(function (textAreaDiv) {
+      //   var $textAreaDiv = $(textAreaDiv);
+      //   console.log($textAreaDiv);
+      //   if (schedulerHour === currentHour) {
+      //     $textAreaDiv.addClass("present");
+      //   }
+      //   if (schedulerHour > currentHour) {
+      //     $textAreaDiv.addClass("future");
+      //   }
+      //   if (schedulerHour < currentHour) {
+      //     $textAreaDiv.addClass("past");
+      //   }
+      //   //console.log($($("textarea")[i]));
+      // });
     </script>
   </body>
 </html>

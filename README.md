@@ -38,7 +38,8 @@ You are required to submit the following for review:
 //      How to accomplish this? x
 //          -see "textAreaBackgroundColor" function comments to see how this was accomplished x
 // Will need to implement local storage function to text-area div
-//      -this will save all tasks entered in the text-area div
+//      -this will save all tasks entered in the text-area div under the given time block so when refreshing the page your tasks are not emptied
+//      -works or saves when save button is clicked (on click event)
 // Will need to implement moment.js x
 //      -for data and time conversions throughout application x
 //          -noticed that this was already linked in the html document x
@@ -62,7 +63,8 @@ You are required to submit the following for review:
 //  -https://www.w3schools.com/jsref/jsref_parseint.asp
 // Calling the ID of an element via jQuery:
 //  -https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
-
+// Returning unique id's from multiple similarly named classes
+//  -https://stackoverflow.com/questions/33147262/get-id-value-from-multiple-class
 
 ```
 
