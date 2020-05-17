@@ -186,6 +186,22 @@
         textAreaBackgroundColor();
 
         //------------Function to store the text input under the textarea div in local storage---------------------
+        //Need to establish an on.click event for when user clicks the save button
+        $(".saveBtn").click(function () {
+          // Need to get the input id hour
+          //console.log($(this).closest($("textarea"))); //.attr("id"));
+          //console.log(this);
+          //console.log($(".saveBtn ~ textarea"));
+          // used this link to capture the buttons nearest sibling id
+          //    https://www.w3schools.com/jquery/traversing_siblings.asp
+          console.log(parseInt($(this).siblings("textarea").attr("id")));
+
+          //  Need to save the input hour
+          localStorage.setItem("");
+        });
+        //Need to acquire the input text (set a variable?)
+        //  Need to save the input text to local storage
+        //Need to call the text inputs from local storage and populate the corresponding hours inputs
       });
 
       //-----------Random Console Logging Efforts--------
